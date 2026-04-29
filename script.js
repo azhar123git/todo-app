@@ -28,7 +28,7 @@ li.style.alignItems = "center";
     }
 
     // checkbox to toggle completion
-    const checkbox = document.createElement('input'); // ✅ fixed
+    const checkbox = document.createElement('input'); // 
     checkbox.type = 'checkbox';
     checkbox.checked = !!todo.completed;
 
@@ -57,7 +57,7 @@ li.style.alignItems = "center";
     delbtn.addEventListener('click', () => {
         todos.splice(index, 1);
         render();
-        saveTodos(); // ✅ fixed
+        saveTodos(); // 
     });
 
     li.appendChild(checkbox);
@@ -68,7 +68,7 @@ li.style.alignItems = "center";
 }
 
 // render the whole todo list from todo array
-function render() { // ✅ fixed
+function render() { // 
     list.innerHTML = '';
 
     // recreate each item 
@@ -86,7 +86,7 @@ function addTodo() {
     }
 
     // push a new todo object 
-    todos.push({ text, completed: false }); // ✅ cleaned
+    todos.push({ text, completed: false }); // 
     input.value = '';
     render()
     saveTodos()
